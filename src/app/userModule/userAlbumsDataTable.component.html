@@ -1,0 +1,13 @@
+<div *ngIf="userAlbums">
+    <ngx-datatable
+            class="material"
+            [rows]="userAlbums"
+            [columns]="columns"
+            [sortType]="'multi'"
+            [columnMode]="'force'"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [rowHeight]="50"
+            [scrollbarV]="true">
+    </ngx-datatable>
+</div>
