@@ -6,12 +6,12 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 *ngIf="album" class="modal-title pull-left">{{album.title}}</h4>
+                <h4 *ngIf="album" class="modal-title pull-left">Album : {{album.title}}</h4>
                 <button type="button" class="close pull-right" (click)="hideChildModal()" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div *ngIf="album" class="modal-body">
+            <div *ngIf="album && album.user" class="modal-body">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm">
@@ -34,7 +34,23 @@
                             Email
                         </div>
                         <div class="col-sm">
-                            {{album.user.email}}
+                            <a href="mailto:{{album.user.email}}">{{album.user.email}}</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            Site web
+                        </div>
+                        <div class="col-sm">
+                            <a [href]="album.user.website">{{album.user.website}}</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            Numéro
+                        </div>
+                        <div class="col-sm">
+                            {{album.user.phone}}
                         </div>
                     </div>
                     <div class="row">
@@ -45,6 +61,7 @@
                             {{album.photos.length}}
                         </div>
                     </div>
+                    <app-photos-slideshow [photos]="album.photos"></app-photos-slideshow>
                 </div>
             </div>
         </div>

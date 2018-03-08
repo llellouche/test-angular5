@@ -3,6 +3,8 @@ export interface UserParameters {
     name: string;
     username: string;
     email: string;
+    phone: string;
+    website: string;
 }
 
 export class User {
@@ -10,12 +12,16 @@ export class User {
     private _name: string;
     private _username: string;
     private _email: string;
+    private _phone: string;
+    private _website: string;
 
     constructor(parameters: UserParameters) {
         this._id = parameters.id ? parameters.id : null;
-        this._name = parameters.name ;
-        this._username = parameters.username ;
-        this._email = parameters.email ;
+        this._name = parameters.name;
+        this._username = parameters.username;
+        this._email = parameters.email;
+        this._phone = parameters.phone;
+        this._website = parameters.website;
     }
 
     get id(): number {
@@ -48,5 +54,21 @@ export class User {
 
     set email(value: string) {
         this._email = value;
+    }
+
+    get phone(): string {
+        return this._phone;
+    }
+
+    set phone(value: string) {
+        this._phone = value;
+    }
+
+    get website(): string {
+        return this._website;
+    }
+
+    set website(value: string) {
+        this._website = value;
     }
 }

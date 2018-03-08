@@ -1,0 +1,8 @@
+<carousel>
+    <slide *ngFor="let photo of photos">
+        <img [src]="photo.url" alt="First slide" style="display: block; width: 100%;">
+        <div class="carousel-caption d-none d-md-block">
+            <h3>{{photo.title}}</h3>
+        </div>
+    </slide>
+</carousel>
