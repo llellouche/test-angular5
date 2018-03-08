@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 
 
 import {AppComponent} from './app.component';
-import {AppRoutingModule} from './AppRoutingModule/appRouting.module';
+import {AppRoutingModule} from './appRoutingModule/appRouting.module';
 import {RouterModule} from '@angular/router';
-import {NotFoundPageComponent} from './AppRoutingModule/notFoundPage.component';
-import {LandingModule} from './LandingModule/landing.module';
-import {LandingPageComponent} from './LandingModule/landingPage.component';
+import {NotFoundPageComponent} from './appRoutingModule/notFoundPage.component';
+import {LandingModule} from './landingModule/landing.module';
+import {LandingPageComponent} from './landingModule/landingPage.component';
 
 
 @NgModule({
