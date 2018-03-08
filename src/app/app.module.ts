@@ -12,6 +12,8 @@ import {UserModule} from './userModule/user.module';
 import {UserAlbumDataTableComponent} from './userModule/userAlbumsDataTable.component';
 import {HttpClientModule} from '@angular/common/http';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
+import {UserAlbumDetailsModalComponent} from "./userModule/userAlbumDetailsModal.component";
+import {ModalModule} from "ngx-bootstrap";
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import {NgxDatatableModule} from '@swimlane/ngx-datatable';
         NotFoundPageComponent,
         LandingPageComponent,
         UserAlbumsPageComponent,
-        UserAlbumDataTableComponent
+        UserAlbumDataTableComponent,
+        UserAlbumDetailsModalComponent,
     ],
     imports: [
         RouterModule,
@@ -29,12 +32,14 @@ import {NgxDatatableModule} from '@swimlane/ngx-datatable';
         AppRoutingModule,
         LandingModule,
         UserModule,
-        NgxDatatableModule
+        NgxDatatableModule,
+        [ModalModule.forRoot()]
     ],
     exports: [
         NotFoundPageComponent,
         LandingPageComponent,
-        UserAlbumsPageComponent
+        UserAlbumsPageComponent,
+        UserAlbumDetailsModalComponent
     ],
     providers: [],
     bootstrap: [AppComponent]

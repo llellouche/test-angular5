@@ -44,8 +44,9 @@ export class ApiRouteGenerator {
     constructor() {
         this._routes = [];
         this._apiRoutePrefix = parametersConfig.apiRoutePrefix;
-        this.addRoute(new ApiRoute('user_list', '/users'));
         this.addRoute(new ApiRoute('album_list', '/albums'));
+        this.addRoute(new ApiRoute('album_photos', '/photos'));
+        this.addRoute(new ApiRoute('user_info', '/users/:userId'));
     }
 
     addRoute(route: ApiRoute) {
@@ -81,7 +82,4 @@ export class ApiRouteGenerator {
         }
     }
 
-    get routes(): ApiRoute[] {
-        return this._routes;
-    }
 }

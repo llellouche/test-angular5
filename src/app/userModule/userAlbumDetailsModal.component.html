@@ -1,0 +1,52 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<!--Large modal-->
+
+<div bsModal #modal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 *ngIf="album" class="modal-title pull-left">{{album.title}}</h4>
+                <button type="button" class="close pull-right" (click)="hideChildModal()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div *ngIf="album" class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            Nom
+                        </div>
+                        <div class="col-sm">
+                            {{album.user.name}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            Nom d'utilisateur
+                        </div>
+                        <div class="col-sm">
+                            {{album.user.username}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            Email
+                        </div>
+                        <div class="col-sm">
+                            {{album.user.email}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            Nombre de photo
+                        </div>
+                        <div class="col-sm">
+                            {{album.photos.length}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

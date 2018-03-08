@@ -1,18 +1,29 @@
+import {Photo, PhotoParameters} from "./photo";
+import {User, UserParameters} from "./user";
+
 export interface AlbumParameters {
     id?: number;
     userId?: number;
     title?: string;
+    photos?: PhotoParameters[];
+    user?: UserParameters;
 }
 
 export class Album {
     private _id: number;
     private _userId: number;
     private _title: string;
+    private _photos: Photo[];
+    private _user: User;
 
     constructor(parameters: AlbumParameters) {
         this._id = parameters.id ? parameters.id : null;
         this._userId = parameters.id ? parameters.id : null;
         this._title = parameters.title;
+        this._photos = parameters.photos && parameters.photos.length > 0
+            ? parameters.photos.map((photoParameters: PhotoParameters) => new Photo(photoParameters))
+            : null;
+        this._user = parameters.user ? new User(parameters.user) : null;
     }
 
     get id(): number {
@@ -37,5 +48,21 @@ export class Album {
 
     set title(value: string) {
         this._title = value;
+    }
+
+    get photos(): Photo[] {
+        return this._photos;
+    }
+
+    set photos(value: Photo[]) {
+        this._photos = value;
+    }
+
+    get user(): User {
+        return this._user;
+    }
+
+    set user(value: User) {
+        this._user = value;
     }
 }

@@ -3,11 +3,14 @@
             class="material"
             [rows]="userAlbums"
             [columns]="columns"
-            [sortType]="'multi'"
+            [loadingIndicator]="loadingIndicator"
             [columnMode]="'force'"
-            [headerHeight]="50"
-            [footerHeight]="50"
-            [rowHeight]="50"
-            [scrollbarV]="true">
+            [headerHeight]="40"
+            [footerHeight]="40"
+            [limit]="10"
+            [rowHeight]="'auto'"
+            [reorderable]="reorderable"
+            (activate)="click($event)">
     </ngx-datatable>
+    <app-album-modal [album]="currentAlbumSelected"></app-album-modal>
 </div>
