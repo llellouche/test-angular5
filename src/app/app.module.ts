@@ -15,6 +15,7 @@ import {NgxDatatableModule} from '@swimlane/ngx-datatable';
 import {UserAlbumDetailsModalComponent} from "./userModule/userAlbumDetailsModal.component";
 import {CarouselModule, ModalModule} from "ngx-bootstrap";
 import {AlbumPhotosSlideshowComponent} from "./userModule/albumPhotosSlideshow.component";
+import {FormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import {AlbumPhotosSlideshowComponent} from "./userModule/albumPhotosSlideshow.c
         UserModule,
         NgxDatatableModule,
         ModalModule.forRoot(),
-        CarouselModule.forRoot()
+        CarouselModule.forRoot(),
+        FormsModule
     ],
     exports: [
         NotFoundPageComponent,

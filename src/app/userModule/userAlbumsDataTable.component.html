@@ -1,7 +1,16 @@
 <div *ngIf="userAlbums">
+    <div class="filter-search-container">
+        <input
+            type="text"
+            class="filter-search"
+            placeholder="Filter la tableau"
+            [(ngModel)]="filter"
+            (keyup)="updateFilter()"
+        />
+    </div>
     <ngx-datatable
             class="material"
-            [rows]="userAlbums"
+            [rows]="userAlbumsFiltered"
             [columns]="columns"
             [loadingIndicator]="loadingIndicator"
             [columnMode]="'force'"
