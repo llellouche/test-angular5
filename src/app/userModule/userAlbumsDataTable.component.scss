@@ -1,5 +1,7 @@
+@import "../../sass/base";
+
 .filter-search-container {
-    text-align: center;
+    @extend %center;
 }
 
 .filter-search {

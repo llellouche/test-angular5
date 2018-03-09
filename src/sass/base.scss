@@ -1,0 +1,9 @@
+%center {
+    text-align: center;
+}
+
+@mixin color($color) {
+    color: $color;
+}
+
+$linkColor: #1CB5C3;

@@ -1,0 +1,15 @@
+@import "../../sass/base";
+
+.center {
+    @extend %center;
+    margin-top: 26px;
+}
+
+.app-link-container {
+    @extend .center;
+
+    a {
+        @include color($linkColor);
+        font-size: 26px;
+    }
+}

@@ -7,7 +7,7 @@ import {Album} from './models/album';
 })
 export class UserAlbumsPageComponent implements OnInit{
     public albums: Album[];
-    constructor(private albumService: AlbumService) {
+    constructor(public albumService: AlbumService) {
     }
 
     ngOnInit() {

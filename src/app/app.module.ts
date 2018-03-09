@@ -44,6 +44,7 @@ import {FormsModule} from "@angular/forms";
         NotFoundPageComponent,
         LandingPageComponent,
         UserAlbumsPageComponent,
+        UserAlbumDataTableComponent,
         UserAlbumDetailsModalComponent,
         AlbumPhotosSlideshowComponent
     ],
