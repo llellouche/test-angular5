@@ -6,7 +6,7 @@ import {UserService} from './userService';
 import {PhotoService} from './photoService';
 import {User} from '../models/user';
 import {Photo} from '../models/photo';
-import {randomDateInCurrentYear} from '../../Utils/dateUtils';
+import {randomDateInCurrentYear} from '../../utils/dateUtils';
 
 @Injectable()
 export class AlbumService {

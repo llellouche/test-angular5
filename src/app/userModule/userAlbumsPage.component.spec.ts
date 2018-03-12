@@ -12,7 +12,7 @@ import {AlbumService} from './services/albumService';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {ApiRouteGenerator} from '../appRoutingModule/apiRouteGenerator';
 import {TimeAgoPipe} from 'time-ago-pipe';
-import {randomDate, randomDateInCurrentYear} from '../Utils/dateUtils';
+import {randomDate, randomDateInCurrentYear} from '../utils/dateUtils';
 
 describe('UserAlbumsPageComponent', () => {
     beforeEach(async(() => {

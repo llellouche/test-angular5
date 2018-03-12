@@ -1,0 +1,18 @@
+## Informations Librairies 
+- Angular
+- Angular CLI
+- Sass
+- jsonPlaceholder
+- TSLint
+- Karma
+- Jasmin
+- Protractor 
+-   Boostrap :
+	- 'angular-ui-bootstrap' : https://angular-ui.github.io/bootstrap
+	- 'ngx-bootstrap': https://valor-software.com/ngx-bootstrap
+-   Datatable:
+	- '@swimlane/ngx-datatable' : https://swimlane.gitbooks.io/ngx-datatable
+-   Huski : Règles de pré-commit et pré-push activées
+-   TSLint: Activé et pris en compte par PHPStorm
+-   Moment:
+	- 'time-ago-pipe': https://github.com/AndrewPoyntz/time-ago-pipe
