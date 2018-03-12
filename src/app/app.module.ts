@@ -16,6 +16,7 @@ import {UserAlbumDetailsModalComponent} from "./userModule/userAlbumDetailsModal
 import {CarouselModule, ModalModule} from "ngx-bootstrap";
 import {AlbumPhotosSlideshowComponent} from "./userModule/albumPhotosSlideshow.component";
 import {FormsModule} from "@angular/forms";
+import {TimeAgoPipe} from "time-ago-pipe";
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {FormsModule} from "@angular/forms";
         UserAlbumsPageComponent,
         UserAlbumDataTableComponent,
         UserAlbumDetailsModalComponent,
-        AlbumPhotosSlideshowComponent
+        AlbumPhotosSlideshowComponent,
+        TimeAgoPipe
     ],
     imports: [
         RouterModule,

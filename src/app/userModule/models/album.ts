@@ -7,6 +7,7 @@ export interface AlbumParameters {
     title?: string;
     photos?: PhotoParameters[];
     user?: UserParameters;
+    createdAt?: number;
 }
 
 export class Album {
@@ -15,15 +16,17 @@ export class Album {
     private _title: string;
     private _photos: Photo[];
     private _user: User;
+    private _createdAt: Date;
 
     constructor(parameters: AlbumParameters) {
         this._id = parameters.id ? parameters.id : null;
-        this._userId = parameters.id ? parameters.id : null;
+        this._userId = parameters.userId ? parameters.userId : null;
         this._title = parameters.title;
         this._photos = parameters.photos && parameters.photos.length > 0
             ? parameters.photos.map((photoParameters: PhotoParameters) => new Photo(photoParameters))
             : null;
         this._user = parameters.user ? new User(parameters.user) : null;
+        this._createdAt = parameters.createdAt ? new Date(parameters.createdAt) : null;
     }
 
     get id(): number {
@@ -64,5 +67,13 @@ export class Album {
 
     set user(value: User) {
         this._user = value;
+    }
+
+    get createdAt(): Date {
+        return this._createdAt;
+    }
+
+    set createdAt(value: Date) {
+        this._createdAt = value;
     }
 }

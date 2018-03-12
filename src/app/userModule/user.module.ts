@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
-import {PhotoService} from "./services/photoService";
 import {AlbumService} from './services/albumService';
+import {PhotoService} from './services/photoService';
 import {UserService} from './services/userService';
 
 @NgModule({
