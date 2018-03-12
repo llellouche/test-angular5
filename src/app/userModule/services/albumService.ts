@@ -2,11 +2,11 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {ApiRouteGenerator} from '../../appRoutingModule/apiRouteGenerator';
 import {Album, AlbumParameters} from '../models/album';
-import {UserService} from "./userService";
-import {PhotoService} from "./photoService";
-import {User} from "../models/user";
-import {Photo} from "../models/photo";
-import {randomDateInCurrentYear} from "../Utils/dateUtils";
+import {UserService} from './userService';
+import {PhotoService} from './photoService';
+import {User} from '../models/user';
+import {Photo} from '../models/photo';
+import {randomDateInCurrentYear} from '../../Utils/dateUtils';
 
 @Injectable()
 export class AlbumService {

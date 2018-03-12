@@ -12,11 +12,11 @@ import {UserModule} from './userModule/user.module';
 import {UserAlbumDataTableComponent} from './userModule/userAlbumsDataTable.component';
 import {HttpClientModule} from '@angular/common/http';
 import {NgxDatatableModule} from '@swimlane/ngx-datatable';
-import {UserAlbumDetailsModalComponent} from "./userModule/userAlbumDetailsModal.component";
-import {CarouselModule, ModalModule} from "ngx-bootstrap";
-import {AlbumPhotosSlideshowComponent} from "./userModule/albumPhotosSlideshow.component";
-import {FormsModule} from "@angular/forms";
-import {TimeAgoPipe} from "time-ago-pipe";
+import {UserAlbumDetailsModalComponent} from './userModule/userAlbumDetailsModal.component';
+import {CarouselModule, ModalModule} from 'ngx-bootstrap';
+import {AlbumPhotosSlideshowComponent} from './userModule/albumPhotosSlideshow.component';
+import {FormsModule} from '@angular/forms';
+import {TimeAgoPipe} from 'time-ago-pipe';
 
 
 @NgModule({

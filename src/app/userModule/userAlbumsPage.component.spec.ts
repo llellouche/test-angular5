@@ -11,6 +11,8 @@ import {UserService} from './services/userService';
 import {AlbumService} from './services/albumService';
 import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {ApiRouteGenerator} from '../appRoutingModule/apiRouteGenerator';
+import {TimeAgoPipe} from 'time-ago-pipe';
+import {randomDate, randomDateInCurrentYear} from '../Utils/dateUtils';
 
 describe('UserAlbumsPageComponent', () => {
     beforeEach(async(() => {
@@ -32,7 +34,8 @@ describe('UserAlbumsPageComponent', () => {
                 UserAlbumsPageComponent,
                 UserAlbumDataTableComponent,
                 UserAlbumDetailsModalComponent,
-                AlbumPhotosSlideshowComponent
+                AlbumPhotosSlideshowComponent,
+                TimeAgoPipe
             ],
         }).compileComponents();
     }));
@@ -41,5 +44,15 @@ describe('UserAlbumsPageComponent', () => {
         const app = fixture.debugElement.componentInstance;
         expect(app).toBeTruthy();
         app.ngOnInit();
+    }));
+    it('Check Random Album Date Generation', async(() => {
+        const date = new Date();
+        const randDate = randomDate(date, date);
+        expect(randDate.getTime()).toEqual(date.getTime());
+
+        const firstDayOfYear = new Date((new Date()).getFullYear(), 0, 1);
+        const randomDateCurrentYear = randomDateInCurrentYear();
+        expect(randomDateCurrentYear).toBeGreaterThanOrEqual(firstDayOfYear.getTime());
+
     }));
 });

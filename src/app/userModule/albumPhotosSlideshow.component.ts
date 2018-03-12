@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
-import {Photo} from "./models/photo";
-import {CarouselConfig} from "ngx-bootstrap";
+import {Photo} from './models/photo';
+import {CarouselConfig} from 'ngx-bootstrap';
 
 @Component({
     selector: 'app-photos-slideshow',

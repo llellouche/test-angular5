@@ -1,7 +1,7 @@
 import {Component, Input, OnChanges, SimpleChanges, ViewChild} from '@angular/core';
-import {UserAlbumDetailsModalComponent} from "./userAlbumDetailsModal.component";
-import {Album} from "./models/album";
-import {DatatableComponent} from "@swimlane/ngx-datatable";
+import {UserAlbumDetailsModalComponent} from './userAlbumDetailsModal.component';
+import {Album} from './models/album';
+import {DatatableComponent} from '@swimlane/ngx-datatable';
 
 @Component({
     selector: 'app-data-table',

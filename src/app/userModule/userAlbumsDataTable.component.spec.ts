@@ -12,6 +12,7 @@ import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {ApiRouteGenerator} from '../appRoutingModule/apiRouteGenerator';
 import {SimpleChange} from '@angular/core';
 import {Album, AlbumParameters} from './models/album';
+import {TimeAgoPipe} from 'time-ago-pipe';
 
 
 describe('UserAlbumDataTableComponent', () => {
@@ -33,7 +34,8 @@ describe('UserAlbumDataTableComponent', () => {
             declarations: [
                 UserAlbumDataTableComponent,
                 UserAlbumDetailsModalComponent,
-                AlbumPhotosSlideshowComponent
+                AlbumPhotosSlideshowComponent,
+                TimeAgoPipe
             ],
         }).compileComponents();
     }));

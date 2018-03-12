@@ -1,7 +1,7 @@
 import {Component, Input, OnChanges, SimpleChanges, ViewChild} from '@angular/core';
-import {ModalDirective} from "ngx-bootstrap";
-import {Album} from "./models/album";
-import {AlbumService} from "./services/albumService";
+import {ModalDirective} from 'ngx-bootstrap';
+import {Album} from './models/album';
+import {AlbumService} from './services/albumService';
 
 @Component({
     selector: 'app-album-modal',

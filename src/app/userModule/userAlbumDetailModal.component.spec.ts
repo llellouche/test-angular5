@@ -10,6 +10,7 @@ import {ApiRouteGenerator} from '../appRoutingModule/apiRouteGenerator';
 import {Album, AlbumParameters} from './models/album';
 import {SimpleChange} from '@angular/core';
 import {User, UserParameters} from './models/user';
+import {TimeAgoPipe} from 'time-ago-pipe';
 
 describe('UserAlbumDetailsModalComponent', () => {
     beforeEach(async(() => {
@@ -27,7 +28,8 @@ describe('UserAlbumDetailsModalComponent', () => {
             ],
             declarations: [
                 UserAlbumDetailsModalComponent,
-                AlbumPhotosSlideshowComponent
+                AlbumPhotosSlideshowComponent,
+                TimeAgoPipe
             ],
         }).compileComponents();
     }));
@@ -69,7 +71,8 @@ describe('UserAlbumDetailsModalComponent', () => {
             id: 1,
             userId: 1,
             title: 'title',
-            user: user
+            user: user,
+            createdAt: 1520892682298
         });
 
         // Set Album With setters
@@ -78,6 +81,7 @@ describe('UserAlbumDetailsModalComponent', () => {
         album.title = 'Title';
         album.user = user;
         album.userId = 1;
+        album.createdAt = new Date();
         app.album = album;
         app.ngOnChanges(new SimpleChange(null, null, null));
     }));
