@@ -1,14 +1,14 @@
 export interface PhotoParameters {
-    id: number;
-    albumId: string;
-    title: string;
-    url: string;
+    id?: number;
+    albumId?: number;
+    title?: string;
+    url?: string;
     thumbnailUrl: string;
 }
 
 export class Photo {
     private _id: number;
-    private _albumId: string;
+    private _albumId: number;
     private _title: string;
     private _url: string;
     private _thumbnailUrl: string;
@@ -29,11 +29,11 @@ export class Photo {
         this._id = value;
     }
 
-    get albumId(): string {
+    get albumId(): number {
         return this._albumId;
     }
 
-    set albumId(value: string) {
+    set albumId(value: number) {
         this._albumId = value;
     }
 

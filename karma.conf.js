@@ -17,7 +17,8 @@ module.exports = function (config) {
       require('@angular/cli/plugins/karma')
     ],
     client:{
-      clearContext: false // leave Jasmine Spec Runner output visible in browser
+      clearContext: false, // leave Jasmine Spec Runner output visible in browser
+      captureConsole: true
     },
     angularCli: {
       environment: 'dev'
@@ -27,16 +28,16 @@ module.exports = function (config) {
       dir: path.join(__dirname, 'coverage/istanbul'),
       thresholds: {
         global: {
-          statements: 80,
-          lines: 80,
-          branches: 80,
-          functions: 80
+          statements: 85,
+          branches: 75,
+          functions: 75,
+          lines: 85
         },
         each: { // thresholds per file
-          statements: 80,
-          lines: 80,
-          branches: 80,
-          functions: 80
+          statements: 50,
+          lines: 50,
+          branches: 35,
+          functions: 50
         }
       }
     },

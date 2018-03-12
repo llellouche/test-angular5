@@ -29,20 +29,22 @@ export class UserAlbumDataTableComponent implements OnChanges{
 
     click(event) {
         if (event.type === 'click') {
-            console.log(event.row);
             this.currentAlbumSelected = <Album>event.row;
             this.userAlbumsDetailsModal.showChildModal();
         }
     }
 
     updateFilter() {
-        // filter our data
-        this.userAlbumsFiltered = this.userAlbums.filter( (album: Album) => {
-            return album.title.toLowerCase().indexOf(this.filter) !== -1 || !this.filter;
-        });
+        if (this.userAlbums) {
+            // filter our data
+            this.userAlbumsFiltered = this.userAlbums.filter( (album: Album) => {
+                return album.title.toLowerCase().indexOf(this.filter) !== -1 || !this.filter;
+            });
 
-        // Whenever the filter changes, always go back to the first page
-        this.table.offset = 0;
+            // Whenever the filter changes, always go back to the first page
+            this.table.offset = 0;
+        }
+
     }
 
 }
