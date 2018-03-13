@@ -66,7 +66,7 @@ describe('UserAlbumDetailsModalComponent', () => {
         user.phone = '0102030405'
         user.website = 'http://website.fr';
 
-        // Set Album With UserParameters
+        // Set Album With setters
         const albumFullParam: Album = new Album(<AlbumParameters>{
             id: 1,
             userId: 1,
@@ -75,7 +75,7 @@ describe('UserAlbumDetailsModalComponent', () => {
             createdAt: 1520892682298
         });
 
-        // Set Album With setters
+        // Set Album With UserParameters
         let album: Album = new Album(<AlbumParameters>{});
         album.id = 25;
         album.title = 'Title';

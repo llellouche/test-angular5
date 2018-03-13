@@ -8,7 +8,7 @@ import {DatatableComponent} from '@swimlane/ngx-datatable';
     templateUrl: './userAlbumsDataTable.component.html',
     styleUrls: ['./userAlbumsDataTable.component.scss']
 })
-export class UserAlbumDataTableComponent implements OnChanges{
+export class UserAlbumDataTableComponent implements OnChanges {
 
     @Input() userAlbums: Album[];
     @Input() userAlbumsFiltered: Album[];
@@ -16,10 +16,14 @@ export class UserAlbumDataTableComponent implements OnChanges{
     @ViewChild(DatatableComponent) table: DatatableComponent;
     public currentAlbumSelected: Album;
     public filter: string;
-    public columns = [
-        {prop: 'id', name: 'Identifiant'},
-        {prop: 'title', name: 'Titre'}
-    ];
+    public columns: any[];
+
+    constructor() {
+        this.columns = [
+            {prop: 'id', name: 'Identifiant'},
+            {prop: 'title', name: 'Titre'}
+        ];
+    }
 
     ngOnChanges(changes: SimpleChanges): void {
         if (this.userAlbums) {

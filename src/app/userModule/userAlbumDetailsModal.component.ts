@@ -8,11 +8,11 @@ import {AlbumService} from './services/albumService';
     templateUrl: './userAlbumDetailsModal.component.html'
 })
 export class UserAlbumDetailsModalComponent implements OnChanges {
-    constructor(private albumService: AlbumService) {
-    }
-
     @Input() album: Album;
     @ViewChild('modal') modal: ModalDirective;
+
+    constructor(private albumService: AlbumService) {
+    }
 
     ngOnChanges(changes: SimpleChanges): void {
         if (this.album) {

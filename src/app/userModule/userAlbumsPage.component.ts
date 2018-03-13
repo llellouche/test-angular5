@@ -5,9 +5,9 @@ import {Album} from './models/album';
 @Component({
     templateUrl: './userAlbumsPage.component.html'
 })
-export class UserAlbumsPageComponent implements OnInit{
+export class UserAlbumsPageComponent implements OnInit {
     public albums: Album[];
-    constructor(public albumService: AlbumService) {
+    constructor(private albumService: AlbumService) {
     }
 
     ngOnInit() {

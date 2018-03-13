@@ -19,11 +19,11 @@ describe('AlbumPhotosSlideshowComponent', () => {
         const app = fixture.debugElement.componentInstance;
         expect(app).toBeTruthy();
     }));
-    it('Set Photos', async(() => {
+    it('Set Slideshow Photos', async(() => {
         const fixture = TestBed.createComponent(AlbumPhotosSlideshowComponent);
         const app = fixture.debugElement.componentInstance;
 
-        // Set Photo With setters
+        // Set Photo With PhotoParameters
         let photoFullParam: Photo = new Photo(<PhotoParameters>{
             id: 1,
             albumId: 1,
@@ -32,7 +32,7 @@ describe('AlbumPhotosSlideshowComponent', () => {
             thumbnailUrl: 'thumbnailUrl'
         });
 
-        // Set Photo With UserParameters
+        // Set Photo With setters
         let photo: Photo = new Photo(<PhotoParameters>{});
         photo.id = 25;
         photo.title = 'Title';

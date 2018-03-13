@@ -39,7 +39,7 @@ describe('UserAlbumDataTableComponent', () => {
             ],
         }).compileComponents();
     }));
-    it('should create the landing page', async(() => {
+    it('Should create the user albums Datatable', async(() => {
         const fixture = TestBed.createComponent(UserAlbumDataTableComponent);
         const app = fixture.debugElement.componentInstance;
         expect(app).toBeTruthy();
@@ -81,7 +81,7 @@ describe('UserAlbumDataTableComponent', () => {
             });
         });
     }));
-    it('Set Albums', async(() => {
+    it('Set DataTableComponent Albums', async(() => {
         const fixture = TestBed.createComponent(UserAlbumDataTableComponent);
         const app = fixture.debugElement.componentInstance;
         let album: Album = new Album(<AlbumParameters>{});
